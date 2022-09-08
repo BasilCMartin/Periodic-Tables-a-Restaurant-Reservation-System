@@ -2,21 +2,21 @@
     {
         "table_name": "Bar #1",
         "capacity": 1,
-        "isFree": true
+        "is_free": true
     },
     {
         "table_name": "Bar #2",
         "capacity": 1,
-        "isFree": false
+        "is_free": false
     },
     {
         "table_name": "#1",
         "capacity": 6,
-        "isFree": true
+        "is_free": true
     },
     {
         "table_name": "#2",
         "capacity": 6,
-        "isFree": true
+        "is_free": true
     }
 ]

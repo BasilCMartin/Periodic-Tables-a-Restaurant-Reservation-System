@@ -16,7 +16,21 @@ async function create(reservation) {
         .then((reservations) => reservations[0])
 }
 
+async function read(reservation_id) {
+    return knex("reservations").select("*").where({reservation_id}).first()
+}
+
+function update(reservation) {
+    return knex("reservations")
+      .select("*")
+      .where({ reservation_id: reservation.reservation_id })
+      .update({ status: reservation.status }, "*")
+      .then((records) => records[0]);
+  }
+
 module.exports = {
     list,
     create,
+    read,
+    update
 }
