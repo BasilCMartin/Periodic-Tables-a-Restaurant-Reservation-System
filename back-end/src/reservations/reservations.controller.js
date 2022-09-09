@@ -8,7 +8,7 @@
  async function list(req, res) {
    const date = req.query.date
    const data = await service.list(date);
-   res.json({ data: data });
+   res.json({data });
  }
  
  function read(req, res) {
@@ -27,6 +27,12 @@ async function update(req, res) {
   
   
   res.json({ data });
+}
+
+
+async function create(req, res, next) {
+  const data = await service.create(req.body.data);
+  res.status(201).json({ data });
 }
 
  // VALIDATION PIPELINE
@@ -161,10 +167,7 @@ next();
      - req has all required fields
      - req has all valid entries of fields
  */
- async function create(req, res, next) {
-   const data = await service.create(req.body.data);
-   res.status(201).json({ data });
- }
+
  
 
  async function reservationExists(req, res, next) {

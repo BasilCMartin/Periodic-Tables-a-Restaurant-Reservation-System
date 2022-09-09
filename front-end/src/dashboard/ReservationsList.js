@@ -1,14 +1,13 @@
 import React from "react";
 
-function ReservationList({ reservation, formatTime }) {
+function ReservationList({ reservation, date, formatTime }) {
   const { first_name, last_name, mobile_number, reservation_time, reservation_date, people } =
     reservation;
-
   let formattedTime = formatTime(reservation_time);
   let formattedHours = Number(formattedTime.slice(0,2)) > 12 ? Number(formattedTime.slice(0,2) % 12) : Number(formattedTime.slice(0,2));
   formattedTime = `${formattedHours}${formattedTime.slice(2)}`;
   
-  return (
+  const reservationCard = (
     <div className="card bg-light mb-3">
       <div className="card-header">Reservation for {formattedTime} {new Date(`${reservation_date} ${reservation_time}`).getHours() < 12 ? "AM" : "PM"}</div>
       <div className="card-body">
@@ -19,8 +18,20 @@ function ReservationList({ reservation, formatTime }) {
         <h6>Number of Guests:</h6>
         <p className="card-text">{people}</p>
       </div>
+      <div className="d-flex justify-content-end">
+          <button type="button" className="btn btn-secondary px-4 mr-4">
+            <a
+              className="text-light"
+              href={`/reservations/${reservation.reservation_id}/seat`}
+            >
+              Seat
+            </a>
+          </button>
+        </div>
     </div>
   );
+
+  return reservationCard
 }
 
 export default ReservationList;
