@@ -1,7 +1,7 @@
 import React from "react";
 
 function ReservationList({ reservation, date, formatTime }) {
-  const { first_name, last_name, mobile_number, reservation_time, reservation_date, people } =
+  const { first_name, last_name, mobile_number, reservation_time, reservation_date, people, status } =
     reservation;
   let formattedTime = formatTime(reservation_time);
   let formattedHours = Number(formattedTime.slice(0,2)) > 12 ? Number(formattedTime.slice(0,2) % 12) : Number(formattedTime.slice(0,2));
@@ -17,16 +17,18 @@ function ReservationList({ reservation, date, formatTime }) {
         <p className="card-text">{mobile_number}</p>
         <h6>Number of Guests:</h6>
         <p className="card-text">{people}</p>
+        <h6>Status</h6>
+        <p className="card-text"data-reservation-id-status={reservation.reservation_id}>{status}</p>
       </div>
       <div className="d-flex justify-content-end">
           <button type="button" className="btn btn-secondary px-4 mr-4">
-            <a
+            {status === "booked" ?<a
               className="text-light"
               href={`/reservations/${reservation.reservation_id}/seat`}
             >
               Seat
-            </a>
-          </button>
+            </a> : null
+}</button>
         </div>
     </div>
   );
