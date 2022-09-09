@@ -158,19 +158,22 @@ async function update(req, res, next) {
     reservation_id: reservation_id,
   };
   const data = await service.update(newTableData);
+  await service.updateReservationStatus1(newTableData);
   res.status(200).json({ data: data });
 }
 
 async function destroy(req, res, next) {
   const table = res.locals.table;
+  const reservation = await reservationsService.read(table.reservation_id)
   await service.delete(table.table_id);
+  await service.updateReservationStatus2(reservation)
   res.sendStatus(200);
 }
 
 function reservationIsNotAlreadySeated(req, res, next){
   const reservation = res.locals.reservation;
   console.log("🚀 ~ reservation.status", reservation.status);
-  if(reservation.status == "seated") return next({status:400, message: `Reservation is already seated`});
+  if(reservation.status === "seated") return next({status:400, message: `Reservation is already seated`});
   
   next();
 }
