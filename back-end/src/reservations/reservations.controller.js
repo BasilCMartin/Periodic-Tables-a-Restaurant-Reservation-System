@@ -39,6 +39,15 @@ async function create(req, res, next) {
   res.status(201).json({ data });
 }
 
+async function editReservation(req, res, next) {
+  const updated = {
+    ...req.body.data,
+    reservation_id: res.locals.reservation.reservation_id,
+  };
+  const data = await service.editReservation(updated);
+  res.json({ data });
+}
+
  // VALIDATION PIPELINE
  const VALID_PROPERTIES = [
   "first_name",
@@ -237,5 +246,12 @@ hasRequiredFields,
      bookedCheck,
      asyncErrorBoundary(create),
    ],
-   update:[asyncErrorBoundary(reservationExists), validStatus, asyncErrorBoundary(update)]
+   update:[asyncErrorBoundary(reservationExists), validStatus, asyncErrorBoundary(update)],
+   editReservation:[asyncErrorBoundary(reservationExists),
+     hasOnlyValidProperties,
+     hasRequiredFields,
+     dateValidator,
+     timeValidator,
+     peopleIsNumber,
+     asyncErrorBoundary(editReservation)]
  };

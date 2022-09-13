@@ -26,8 +26,8 @@ function Search() {
       }
     );
     const resData = await response.json();
-    console.log(resData)
-    console.log(resData.data.length)
+    // console.log(resData)
+    // console.log(resData.data.length)
     if (response.status !== 400) {
         setReservations(resData.data);
     }

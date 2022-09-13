@@ -38,10 +38,19 @@ function update(reservation) {
       .orderBy("reservation_date");
   }
 
+  function editReservation(updated) {
+    return knex("reservations")
+      .select("*")
+      .where({ reservation_id: updated.reservation_id })
+      .update(updated, "*")
+      .then((x) => x[0]);
+  }
+
 module.exports = {
     list,
     create,
     read,
     update,
-    search
+    search,
+    editReservation
 }

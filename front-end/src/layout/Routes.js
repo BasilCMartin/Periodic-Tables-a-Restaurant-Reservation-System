@@ -8,7 +8,7 @@ import NewReservations from "./NewReservationForm";
 import SeatTableForm from "../tables/SeatTableForm";
 import TableForm from "../tables/TableForm";
 import Search from "./Search"
-
+import Edit from "./Edit"
 /**
  * Defines all the routes for the application.
  *
@@ -42,6 +42,9 @@ function Routes() {
       </Route>
       <Route path="/search">
         <Search/>
+      </Route>
+      <Route path ="/reservations/:reservation_id/edit">
+        <Edit />
       </Route>
       <Route>
         <NotFound />

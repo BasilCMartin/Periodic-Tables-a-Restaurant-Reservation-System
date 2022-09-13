@@ -137,8 +137,8 @@ function NewReservations() {
         />
       </label>
       <button type="button" onClick={handleCancel}>
-        {" "}
-        Cancel{" "}
+        
+        Cancel
       </button>
       <button type="submit"> Submit </button>
     </form>

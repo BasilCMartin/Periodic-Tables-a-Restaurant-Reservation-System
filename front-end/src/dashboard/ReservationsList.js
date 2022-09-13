@@ -1,6 +1,32 @@
 import React from "react";
+import { useHistory } from "react-router";
+import { cancelReservation } from "../utils/api";
 
 function ReservationList({ reservation, date, formatTime }) {
+  const history = useHistory();
+
+  const handleReservationCancel = async (event) => {
+event.preventDefault()
+try{
+  if (window.confirm(
+    "Do you want to cancel this reservation? This cannot be undone."
+  ) 
+    ) {
+      const status = "cancelled";
+        await cancelReservation(reservation, status);
+        history.go(0);
+    } 
+    
+ 
+}
+catch(error) {
+
+}
+  }
+
+
+
+  
   const { first_name, last_name, mobile_number, reservation_time, reservation_date, people, status } =
     reservation;
   let formattedTime = formatTime(reservation_time);
@@ -30,10 +56,31 @@ function ReservationList({ reservation, date, formatTime }) {
             </a> : null
 }</button>
         </div>
+        <div>
+          <button type="button" className="btn btn-secondary px-4 mr-4">
+          {status === "booked" ?<a
+              className="text-light"
+              href={`/reservations/${reservation.reservation_id}/edit`}
+            >
+              Edit
+            </a> : null
+}
+          </button>
+          <button
+            className="btn btn-link"
+            type="button"
+            name="cancel"
+            data-reservation-id-cancel={reservation.reservation_id}
+            onClick={handleReservationCancel}
+          >
+            Cancel
+          </button>
+        </div>
     </div>
   );
-
-  return reservationCard
+if (reservation.status !== "cancelled")
+  return  reservationCard
+  else return null
 }
 
 export default ReservationList;

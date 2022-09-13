@@ -69,7 +69,11 @@ function Dashboard({ date }) {
     return () => abortController.abort();
   }
 
+//const validReservations = reservations.filter((res)=>res.status !== "cancelled")
+
+
   const reservationsList = reservations.map((reservation, index) => (
+    
     <ReservationsList
       key={index}
       reservation={reservation}
