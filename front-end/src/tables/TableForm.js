@@ -75,14 +75,14 @@ function TableForm() {
           type="button"
           name="cancel-btn"
           onClick={cancelHandler}
-          className="btn btn-primary"
+          className="btn-primary text-dark"
         >
           Cancel
         </button>
         <button
           type="submit"
           name="submit-btn"
-          className="btn btn-secondary"
+          className=" btn-secondary text-dark"
         >
           Submit
         </button>

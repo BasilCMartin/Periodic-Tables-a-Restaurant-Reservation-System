@@ -38,13 +38,13 @@ function TableList({ table, loadDashboard }) {
   }
 
   return (
-    <div className="card mx-3" id="tables-list">
+    <div className="card bg-secondary  mx-2 mb-5" id="tables-list">
     <div className="card-header">
       Table: {table_name}
     </div>
-    <ul className="list-group list-group-flush">
-      <li className="list-group-item second-background-color">Capacity: {capacity}</li>
-      <li className="list-group-item second-background-color" data-table-id-status={table.table_id}>{!reservation_id ? "Free" : "occupied"}</li>
+    <ul className="list-group list-group-flush ">
+      <li className="list-group-item bg-secondary">Capacity: {capacity}</li>
+      <li className="list-group-item bg-secondary" data-table-id-status={table.table_id}>{!reservation_id ? "Free" : "occupied"}</li>
     </ul>
     {reservation_id ? <button type="button" onClick={finishBtnHandler} className="btn btn-primary" data-table-id-finish={table.table_id}>Finish</button> : <></>}
   </div>

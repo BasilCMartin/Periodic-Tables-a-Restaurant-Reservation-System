@@ -113,7 +113,7 @@ function Dashboard({ date }) {
           <></>
         )}
         <h3
-          style={{ fontFamily: "Racing Sans One", fontSize: "2.5rem" }}
+          style={{ fontFamily: "Helvetica", fontSize: "2.5rem" }}
           className="col d-flex flex-wrap justify-content-center my-2"
         >
           {new Date().getHours() < 12 ? "Good morning." : "Good evening."}
@@ -126,7 +126,7 @@ function Dashboard({ date }) {
             type="button"
             name="previous-btn"
             id="scroll-button"
-            className="ml-auto"
+            className="ml-auto btn-danger text-dark"
             onClick={previousHandler}
           >
             Previous
@@ -135,7 +135,7 @@ function Dashboard({ date }) {
             type="button"
             name="next-btn"
             id="scroll-button"
-            className="mx-3"
+            className="mx-3 btn-danger text-dark"
             onClick={nextHandler}
           >
             Next
@@ -144,7 +144,7 @@ function Dashboard({ date }) {
             type="button"
             name="today"
             id="scroll-button"
-            className="mr-auto"
+            className="mr-auto btn-primary text-dark"
             onClick={todayHandler}
           >
             Today

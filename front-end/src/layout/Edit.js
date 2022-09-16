@@ -22,7 +22,7 @@ function Edit() {
     const [error, setError] = useState(undefined);
     const [errorMessage, setErrorMessage] = useState(undefined);
     const { reservation_id } = useParams();
-const [reservation, setReservation] = useState()
+
 
 useEffect(() => {
     const abortController = new AbortController();
@@ -38,7 +38,6 @@ useEffect(() => {
         }
       );
       const resData = await response.json();
-      setReservation(resData.data);
       setFormData({
         ...resData.data,
         reservation_date: resData.data.reservation_date.slice(0, 10),

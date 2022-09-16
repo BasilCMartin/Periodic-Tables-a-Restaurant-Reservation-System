@@ -136,11 +136,11 @@ function NewReservations() {
           required
         />
       </label>
-      <button type="button" onClick={handleCancel}>
+      <button type="button" className="btn-danger text-dark" onClick={handleCancel}>
         
         Cancel
       </button>
-      <button type="submit"> Submit </button>
+      <button type="submit" className="btn-primary text-dark"> Submit </button>
     </form>
   );
 
