@@ -8,7 +8,7 @@ A live version of the app can be accessed here: https://rest-res-app.herokuapp.c
 2. Run `npm run start` to start the application server.
 ## Features
 ### Displays reservations and tables for given date
-![Alt text](/main/Screen%20Shot%202022-09-19%20at%204.13.36%20PM.png?raw=true "Optional Title")
+![Alt text](/blob/main/Screen%20Shot%202022-09-19%20at%204.13.36%20PM.png "Optional Title")
 ### Reservations can be assigned to and seated at tables
 
 ### New reservations can be added
