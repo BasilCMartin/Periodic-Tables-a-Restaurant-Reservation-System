@@ -1,7 +1,7 @@
 # Periodic Tables: Restaurant Reservation System
 Periodic Tables is a reservation system designed directly for restaurant personnel. The application includes features to create, edit, and keep track of reservations and tables.
 
-##Demo
+## Demo
 A live version of the app can be accessed here: https://rest-res-app.herokuapp.com/dashboard
 ##Installation
 1. Run `npm install` from the root folder to install project dependencies.
