@@ -89,11 +89,11 @@ function ReservationForm({reservationData, setReservationData, submitHandler, ca
                 type="button"
                 name="cancel-btn"
                 onClick={cancelHandler}
-                className="btn btn-primary button-position"
+                className=" btn-primary button-position"
               >
                 Cancel
               </button>
-              <button type="submit" name="submit-btn" className="btn btn-secondary button-position">
+              <button type="submit" name="submit-btn" className="btn-secondary button-position">
                 Submit
               </button>
             
