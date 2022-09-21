@@ -20,12 +20,12 @@ A live version of the app can be accessed here: https://bcm-frontend.herokuapp.c
 ### Each reservation is editable
 ![Edit Reservation](/Screen%20Shot%202022-09-19%20at%204.17.51%20PM.png "Edit Reservation")
 ### Test Cases
-1.`npm test` runs all tests
-2.`npm run test:backend` runs all backend tests
-3.`npm run test:frontend` runs all frontend tests
-4.`npm run test:e2e` runs end to end tests
-5.a number parameter 1-8 can also be provided (as in, `npm run test:1:backend`) to run a specfic set of tests
-6.specifics on tests can be found within the test files
+1.  `npm test` runs all tests
+2.  `npm run test:backend` runs all backend tests
+3.  `npm run test:frontend` runs all frontend tests
+4.  `npm run test:e2e` runs end to end tests
+5.  a number parameter 1-8 can also be provided (as in, `npm run test:1:backend`) to run a specfic set of tests
+6.  specifics on tests can be found within the test files
 
 
 This app was made with React.js, Postgresql, Express, and Node.
