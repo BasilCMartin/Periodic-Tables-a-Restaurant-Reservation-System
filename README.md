@@ -2,7 +2,7 @@
 Periodic Tables is a reservation system designed directly for restaurant personnel. The application includes features to create, edit, and keep track of reservations and tables.
 
 ## Demo
-A live version of the app can be accessed here: https://rest-res-app.herokuapp.com/dashboard
+A live version of the app can be accessed here: https://bcm-frontend.herokuapp.com/dashboard
 ## Installation
 1. Run `npm install` from the root folder to install project dependencies.
 2. Run `npm run start` to start the application server.
@@ -19,6 +19,13 @@ A live version of the app can be accessed here: https://rest-res-app.herokuapp.c
 ![Add Table](/Screen%20Shot%202022-09-19%20at%204.17.31%20PM.png "Add Table")
 ### Each reservation is editable
 ![Edit Reservation](/Screen%20Shot%202022-09-19%20at%204.17.51%20PM.png "Edit Reservation")
+## Test Cases
+`npm test` runs all tests
+`npm run test:backend` runs all backend tests
+`npm run test:frontend` runs all frontend tests
+`npm run test:e2e` runs end to end tests
+a number parameter 1-8 can also be provided (as in, `npm run test:1:backend`) to run a specfic set of tests
+specifics on tests can be found within the test files
 
 
 This app was made with React.js, Postgresql, Express, and Node.
