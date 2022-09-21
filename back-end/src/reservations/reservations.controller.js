@@ -139,7 +139,7 @@ function peopleIsNumber(req, res, next) {
 function notTuesday(req,res,next) {
   const { data = {} } = req.body;
 const dateObject = new Date(data["reservation_date"])
-  if (dateObject.getDay()=== 1) {
+if (dateObject.getUTCDay() === 2) {
     next({
       status: 400,
       message: `Reservations cannot be made for Tuesday, as the restaurant is closed Tuesdays.`,
