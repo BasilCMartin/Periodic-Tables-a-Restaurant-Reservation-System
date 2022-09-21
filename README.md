@@ -19,7 +19,7 @@ A live version of the app can be accessed here: https://bcm-frontend.herokuapp.c
 ![Add Table](/Screen%20Shot%202022-09-19%20at%204.17.31%20PM.png "Add Table")
 ### Each reservation is editable
 ![Edit Reservation](/Screen%20Shot%202022-09-19%20at%204.17.51%20PM.png "Edit Reservation")
-## Test Cases
+### Test Cases
 `npm test` runs all tests
 `npm run test:backend` runs all backend tests
 `npm run test:frontend` runs all frontend tests
