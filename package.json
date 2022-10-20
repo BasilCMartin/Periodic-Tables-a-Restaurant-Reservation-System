@@ -49,6 +49,7 @@
   "author": "Thinkful, Inc.",
   "license": "UNLICENSED",
   "dependencies": {
-    "heroku": "^7.62.0"
+    "heroku": "^7.62.0",
+    "nodemon": "^2.0.20"
   }
 }

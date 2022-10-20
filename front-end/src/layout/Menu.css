@@ -5,3 +5,7 @@
 #nav{
     font-family:'Courier New', Courier, monospace
 }
+
+#background-container{
+    background-color: pink;
+}

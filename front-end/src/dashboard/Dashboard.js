@@ -5,7 +5,7 @@ import ErrorAlert from "../layout/ErrorAlert";
 import ReservationsList from "./ReservationsList";
 import { formatAsTime, previous, next, today } from "../utils/date-time";
 import TableList from "./TableList";
-
+import "./Dashboard.css"
 
 function Dashboard({ date }) {
   const [reservations, setReservations] = useState([]);
